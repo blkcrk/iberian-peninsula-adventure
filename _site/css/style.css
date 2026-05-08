@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fafaf9;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #555;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+meta-info {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0 2rem 0;
+    font-size: 0.95rem;
+    color: #666;
+    flex-wrap: wrap;
+}
+
+.date {
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.city {
+    color: #0066cc;
+    font-weight: 500;
+}
+
+.mood {
+    font-style: italic;
+    color: #777;
+}
+
+.entry {
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.entry section {
+    margin: 2rem 0;
+}
+
+.narrative {
+    line-height: 1.8;
+}
+
+.narrative p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.map {
+    height: 400px;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.locations ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.locations li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    color: #555;
+}
+
+.locations li:before {
+    content: "📍 ";
+    margin-left: -1.5rem;
+    margin-right: 0.5rem;
+}
+
+.restaurant, .wine-entry {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border-left: 4px solid #0066cc;
+}
+
+.restaurant h3, .wine-entry h3 {
+    margin-top: 0;
+    color: #0066cc;
+    font-size: 1.1rem;
+}
+
+.restaurant p, .wine-entry p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.photo-gallery img:hover {
+    transform: scale(1.02);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.archive {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.archive h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.archive p {
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.archive-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    border-left: 4px solid transparent;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.archive-item:hover {
+    border-left-color: #0066cc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.archive-item .date {
+    font-weight: 600;
+    color: #0066cc;
+    min-width: 110px;
+    flex-shrink: 0;
+}
+
+.archive-item .title {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .entry {
+        padding: 1.5rem;
+    }
+
+    meta-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .map {
+        height: 300px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .restaurant, .wine-entry {
+        padding: 1rem;
+    }
+}
